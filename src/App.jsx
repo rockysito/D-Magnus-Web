@@ -10,7 +10,7 @@ import Features from "./sections/Features";
 import Footer from "./components/Footer";
 import FortanGold from "./sections/FortanGold";
 import AboutDetail from "./sections/AboutDetail";
-
+import VideoHero from "./components/VideoHero";
 
 function App() {
   return (
@@ -24,7 +24,7 @@ function App() {
           path="/"
           element={
             <>
-              <Hero />
+              <VideoHero />
               <Products />
               <About />
               <Features />
