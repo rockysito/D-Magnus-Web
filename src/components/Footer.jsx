@@ -1,29 +1,43 @@
 import { Link } from "react-router-dom";
+import logo from "../assets/images/logo 2.png";
 
 function Footer() {
   return (
     <footer className="bg-black border-t border-zinc-800 text-zinc-400">
       {/* TOP */}
       <div className="max-w-7xl mx-auto px-6 py-20 grid gap-12 md:grid-cols-3">
-        {/* TAUTAN CEPAT */}
+        {/* BRAND + TAUTAN CEPAT */}
         <div>
+          {/* MINI BRAND */}
+          <div className="flex items-center gap-3 mb-6">
+            <img src={logo} alt="D'Magnus" className="h-8 w-auto object-contain" />
+            <span className="brand-font text-[#D4AF37] text-sm tracking-[0.25em]">
+              D'MAGNUS
+            </span>
+          </div>
+
           <h4 className="brand-font text-[#D4AF37] text-sm mb-6 tracking-[0.25em] uppercase">
             Tautan Cepat
           </h4>
           <ul className="space-y-3 text-sm">
             <li>
-              <Link to="/about" className="hover:text-[#D4AF37] transition">
-                Sekilas D’Magnus
+              <Link to="/" className="hover:text-[#D4AF37] transition">
+                Beranda
               </Link>
             </li>
             <li>
-              <a href="#products" className="hover:text-[#D4AF37] transition">
+              <a href="/#products" className="hover:text-[#D4AF37] transition">
                 Produk
               </a>
             </li>
             <li>
-              <Link to="/" className="hover:text-[#D4AF37] transition">
-                Beranda
+              <Link to="/about" className="hover:text-[#D4AF37] transition">
+                Sekilas D'Magnus
+              </Link>
+            </li>
+            <li>
+              <Link to="/disclaimer" className="hover:text-[#D4AF37] transition">
+                Disclaimer
               </Link>
             </li>
           </ul>
@@ -56,48 +70,15 @@ function Footer() {
           </h4>
 
           <div className="flex gap-5 text-[#D4AF37]">
-            {/* FACEBOOK */}
-            <a
-              href="https://facebook.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70 transition">
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24">
-                <path d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2v-3h2v-2.3c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.3l-.4 3h-1.9v7A10 10 0 0 0 22 12z" />
-              </svg>
-            </a>
-
             {/* INSTAGRAM */}
             <a
               href="https://www.instagram.com/dmagnusofficial?igsh=bms3cW11dmFwc3Zj"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Instagram D'Magnus"
               className="hover:opacity-70 transition">
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
-              </svg>
-            </a>
-
-            {/* YOUTUBE */}
-            <a
-              href="https://youtube.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:opacity-70 transition">
-              <svg
-                width="22"
-                height="22"
-                fill="currentColor"
-                viewBox="0 0 24 24">
-                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.6 3.5 12 3.5 12 3.5s-7.6 0-9.4.6A3 3 0 0 0 .5 6.2 31.7 31.7 0 0 0 0 12a31.7 31.7 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.8.6 9.4.6 9.4.6s7.6 0 9.4-.6a3 3 0 0 0 2.1-2.1A31.7 31.7 0 0 0 24 12a31.7 31.7 0 0 0-.5-5.8zM9.5 15.5v-7l6 3.5-6 3.5z" />
               </svg>
             </a>
 
@@ -106,14 +87,34 @@ function Footer() {
               href="https://wa.me/6285136249316"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="WhatsApp D'Magnus"
               className="hover:opacity-70 transition">
-              <svg
-                width="20"
-                height="20"
-                fill="currentColor"
-                viewBox="0 0 24 24">
+              <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 2 18.9L0 24l5.3-1.9A12 12 0 1 0 20.5 3.5z" />
               </svg>
+            </a>
+          </div>
+
+          {/* KONTAK */}
+          <div className="mt-8 space-y-2 text-sm">
+            <p className="text-zinc-500 text-xs uppercase tracking-widest mb-3">Kontak</p>
+            <a
+              href="https://wa.me/6285136249316"
+              className="flex items-center gap-2 hover:text-[#D4AF37] transition">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0 12 12 0 0 0 2 18.9L0 24l5.3-1.9A12 12 0 1 0 20.5 3.5z" />
+              </svg>
+              +62 851-3624-9316
+            </a>
+            <a
+              href="https://www.instagram.com/dmagnusofficial?igsh=bms3cW11dmFwc3Zj"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-[#D4AF37] transition">
+              <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm6.5-.5a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
+              </svg>
+              @dmagnusofficial
             </a>
           </div>
         </div>
@@ -124,9 +125,9 @@ function Footer() {
 
       {/* BOTTOM */}
       <div className="max-w-7xl mx-auto px-6 py-8 flex flex-col md:flex-row justify-between text-xs text-zinc-500 gap-4">
-        <p>Produk ini hanya untuk konsumen berusia 21 tahun ke atas.</p>
+        <p>Produk ini hanya untuk konsumen berusia <strong className="text-zinc-400">21 tahun ke atas</strong>.</p>
         <p>
-          © {new Date().getFullYear()} House of D’Magnus Karangdaleman. All
+          © {new Date().getFullYear()} House of D'Magnus Karangdaleman. All
           rights reserved.
         </p>
       </div>
